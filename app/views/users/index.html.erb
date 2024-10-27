@@ -1,0 +1,43 @@
+<style type="text/css">
+table, th, td{
+    text-align:center;
+  border: 1px solid ;
+}
+</style>
+
+
+
+
+<h1>ALL USERS </h1>
+
+<p> <%=link_to "new user", new_user_path %> </p>
+
+<table>
+    <thead>
+        <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>email</td>
+        <td>phno</td>
+        <td></td>
+        <td>change</td>
+        <td>destro</td>
+        <td>add product</td>
+        <td>show product</td>
+        </tr>
+    </thead>
+    <tbody>
+    <% @sho.each do |table| %>
+        <tr>
+        <td> <%=table.id %> </td>
+        <td> <%=table.name %> </td>
+        <td> <%=table.email %> </td>
+        <td> <%=table.phno %> </td>
+        <td>  </td>
+        <td> <%=link_to "edit" ,edit_user_path(table.id) %> </td>
+        <td> <%=link_to "delete", user_path(table.id), data: {turbo_method: :delete,turbo_confirm: "Are you sure?" } %> </td>
+        <td> <%=link_to "add product", new_user_product_path(table.id) %> </td>
+        <td> <%=link_to "show product", user_path(table.id) %> </td>
+        <% end %>
+        </tr>
+    </tbody>

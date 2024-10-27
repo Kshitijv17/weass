@@ -1,0 +1,10 @@
+
+
+<h3>Orders</h3>
+  <ul>
+    <% @orders.each do |order| %>
+      <li>
+        Product: <%= order.product.product_name %>
+      </li>
+    <% end %>
+  </ul>

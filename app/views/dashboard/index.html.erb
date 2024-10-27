@@ -1,0 +1,33 @@
+<h1>DASHBOARD</h1>
+
+<style type="text/css">
+table, th, td{
+    text-align:center;
+  border: 1px solid ;
+}
+</style>
+
+
+<p> <%=link_to "register", new_user_path %> </p>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+    <th scope="col">id</th>
+    <th scope="col">name</th>
+    <th scope="col">show order</th>
+    <th scope="col">all product</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @sho.each do |table| %>
+        <tr>
+        <td> <%=table.id %> </td>
+        <td> <%=table.name %> </td>
+        <td> <%=link_to "show order", dashboard_path(table.id) %> </td>
+        <td> <%=link_to "all product", products_path	 %> </td>
+        <% end %>
+        </tr>
+    </tbody>
+
+    </table>

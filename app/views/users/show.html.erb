@@ -1,0 +1,46 @@
+<h1>id:<%= @explain.id%></strong></h1>
+<h1>name:<%= @explain.name%></strong></h1>
+<h1>phno:<%= @explain.phno%></strong></h1>
+<p> </p>
+
+
+
+
+
+
+
+<style type="text/css">
+table, th, td{
+  border: 1px solid ;
+}
+</style>
+<div>
+<table style="width: 100%">
+<% @explain.product.each do |info| %>
+
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><%= info.id %></td>
+        <td><%= info.product_name %></td>
+        <td><%= link_to "huu", product_path(info.id) ,  data: {turbo_method: :delete,turbo_confirm: "Are you sure?" } %> </td>
+        </tr>
+    </tbody>
+    <% end %>
+</table>
+
+</div>
+
+
+ <%= link_to 'Back to square one', root_path %>
+
+
+
+
+
