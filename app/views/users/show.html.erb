@@ -29,7 +29,7 @@ table, th, td{
         <tr>
         <td><%= info.id %></td>
         <td><%= info.product_name %></td>
-        <td><%= link_to "huu", product_path(info.id) ,  data: {turbo_method: :delete,turbo_confirm: "Are you sure?" } %> </td>
+        <td><%#= link_to "huu", product_path(info.id) ,  data: {turbo_method: :delete,turbo_confirm: "Are you sure?" } %> </td>
         </tr>
     </tbody>
     <% end %>

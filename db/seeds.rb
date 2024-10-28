@@ -20,33 +20,41 @@
 # end
 
 # Clear existing records
-User.destroy_all
-Product.destroy_all
-Order.destroy_all
+# User.destroy_all
+# Product.destroy_all
+# Order.destroy_all
 
 # Create 10 users
-10.times do |i|
-  User.create(
-    name: "User #{i + 1}",
-    email: "user#{i + 1}@example.com",
-    phno: "123456789#{i}" # Just a simple phone number pattern
-  )
-end
+# 10.times do |i|
+#   User.create(
+#     name: "User #{i + 1}",
+#     email: "user#{i + 1}@example.com",
+#     phno: "123456789#{i}" # Just a simple phone number pattern
+#   )
+# end
 
 # Create 1 product per user
-User.find_each do |user|
+# User.find_each do |user|
+10.times do |i|
   Product.create(
-    product_name: "Product for #{user.name}",
-    user: user
+    # product_name: "Product for #{user.name}",
+    # user: user
+    product_name: "ba #{i + 1}",
+    user_id: "#{i + 1}"
   )
 end
 
 # Create 1 order for each product
-Product.find_each do |product|
-  Order.create(
-    user: User.order("RANDOM()").first, # Random user
-    product: product
-  )
-end
+# Product.find_each do |product|
+#   Order.create(
+#     user: User.order("RANDOM()").first, # Random user
+#     product: product
+#   )
+# end
 
-puts "Seeded #{User.count} users, #{Product.count} products, and #{Order.count} orders."
+# puts "Seeded #{User.count} users, #{Product.count} products, and #{Order.count} orders."
+
+
+
+
+

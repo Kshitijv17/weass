@@ -16,6 +16,7 @@ table, th, td{
         <tr>
         <td>id</td>
         <td>name</td>
+        <td>user_id</td>
         <td></td>
         <td>order</td>
         </tr>
@@ -25,7 +26,9 @@ table, th, td{
         <tr>
         <td> <%=table.id %> </td>
         <td> <%=table.product_name %> </td>
+        <td> <%=table.user_id %> </td>
         <td>  </td>
+        <td> <%=link_to "add order", new_user_product_order_path(table.id,table.user_id) %> </td>
      
           
     

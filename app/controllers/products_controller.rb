@@ -14,7 +14,6 @@ class ProductsController < ApplicationController
 
     def show
         @explain = Product.find(params[:id])
-
     end
 
     def edit

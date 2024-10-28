@@ -24,8 +24,8 @@ table, th, td{
         <tr>
         <td> <%=table.id %> </td>
         <td> <%=table.name %> </td>
-        <td> <%=link_to "show order", dashboard_path(table.id) %> </td>
-        <td> <%=link_to "all product", products_path	 %> </td>
+        <td> <%= link_to "show order", order_path(table.id) %> </td>
+        <td> <%=link_to "all product", user_products_path(table.id)	 %> </td>
         <% end %>
         </tr>
     </tbody>

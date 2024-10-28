@@ -5,9 +5,9 @@ Rails.application.routes.draw do
     resources :orders
    end
   end
-  resources :products
+  # resources :products
   
   # get 'dashboard', to: 'users#dashboard'
-  resources :dashboard
+  # resources :dashboard
   resources :orders
 end

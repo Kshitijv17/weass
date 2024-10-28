@@ -16,7 +16,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_24_072608) do
     t.integer "product_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "receipt"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end

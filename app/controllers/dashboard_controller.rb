@@ -2,6 +2,7 @@ class DashboardController < ApplicationController
 
     def index
         @sho = User.all
+        
     end
 
     def show
